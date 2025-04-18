@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Screening System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #374151, #1f2937);
+      padding: 20px 20px 20px 80px;
+      color: white;
+      text-align: left;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #1f2937;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png') #f8fafc;
+    }
+    .hero img {
+      width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .upload-section {
+      background: white;
+      margin: 40px auto;
+      max-width: 600px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      text-align: center;
+    }
+    .upload-section input[type="file"] {
+      margin-top: 20px;
+    }
+    .upload-btn {
+      margin-top: 20px;
+      background: #111827;
+      color: white;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .upload-btn:hover {
+      background: #374151;
+    }
+    footer {
+      background: #1f2937;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .social-icons i {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    .contact-form {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .contact-form button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #1f2937;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" class="logo" />
+    <div>
+      <h1>Resume Screening System</h1>
+      <p>Upload your resume and get smart job role predictions</p>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#upload">Upload Resume</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h2>AI-powered Resume Analyzer</h2>
+      <p>This tool uses machine learning to scan your resume, identify your skills and recommend job roles suited for your profile.</p>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/2922/2922510.png" alt="Profile Photo" />
+  </section>
+
+  <section class="upload-section" id="upload">
+    <h2>Upload Your Resume (PDF)</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="resume" accept="application/pdf" required />
+      <br />
+      <button class="upload-btn" type="submit">Analyze</button>
+    </form>
+  </section>
+
+  <section class="upload-section" id="about">
+    <h2>About This Project</h2>
+    <p>This Resume Screening System leverages NLP and machine learning models to predict the most relevant job role for any given resume. It helps recruiters filter out resumes faster and helps applicants understand where they stand.</p>
+  </section>
+
+  <section class="contact-form" id="contact">
+    <h2>Contact Me</h2>
+    <form action="mailto:abhishukla2209@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Connect with me:</p>
+    <div class="social-icons">
+      <a href="mailto:abhishukla2209@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/abhishek-shukla-8497b0271" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.hackerrank.com/abhishukla2209" target="_blank"><i class="fab fa-hackerrank"></i></a>
+    </div>
+    <p>&copy; 2025 Abhishek Shukla | Resume Screening Project</p>
+  </footer>
+</body>
+</html>
